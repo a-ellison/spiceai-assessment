@@ -1,0 +1,29 @@
+version: v1beta1
+kind: Spicepod
+name: assessment
+
+datasets:
+  - from: postgres:public.characters
+    name: characters
+    params:
+      pg_host: localhost
+      pg_db: test
+      pg_user: test
+      pg_pass: test
+      pg_port: 5433
+      pg_sslmode: disable
+    acceleration:
+      enabled: true
+      refresh_check_interval: 10s
+  - from: postgres:public.works
+    name: works
+    params:
+      pg_host: localhost
+      pg_db: test
+      pg_user: test
+      pg_pass: test
+      pg_port: 5433
+      pg_sslmode: disable
+    acceleration:
+      enabled: true
+      refresh_check_interval: 10s

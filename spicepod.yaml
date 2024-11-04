@@ -27,3 +27,15 @@ datasets:
     acceleration:
       enabled: true
       refresh_check_interval: 10s
+  - from: mysql:chapters
+    name: chapters
+    params:
+      mysql_host: 127.0.0.1
+      mysql_tcp_port: 5434
+      mysql_db: demo
+      mysql_user: demo
+      mysql_pass: demo
+      mysql_sslmode: disabled
+    acceleration:
+      enabled: true
+      refresh_check_interval: 10s

@@ -10,6 +10,7 @@ start:
 	@docker run --name assessment-postgres-container -p 5433:5432 -d assessment-postgres-image
 	@echo "starting mysql container"
 	@docker run --name assessment-mysql-container -p 5434:3306 -d assessment-mysql-image
+	@sleep 10 # make sure database servers are up
 	@echo "starting spice runtime"
 	@bash start-spice.sh
 
